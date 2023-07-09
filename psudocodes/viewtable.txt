@@ -1,0 +1,36 @@
+Create or replace a view named VW_CRC_OAC with the following columns:
+  COM_ID, PARTY_ID, PARTY_NAME, CSL_ID, ETA_ETD_NO,
+  ETD_POL_D, POD_ID, POD, CNTR_ID, CNTR_SIZE,
+  CNTR_TYPE, COST_TERM, RATE, ENCODED_TYPE,
+  ENCODED_TERM, POD_ID_EN
+
+For the view:
+  From the OAC_CRC table,
+    Extract the following data:
+      COM_ID,
+      PARTY_ID,
+      PARTY_NAME,
+      CSL_ID,
+      ETA_ETD_NO,
+      ETD_POL_D,
+      POD_ID,
+      POD,
+      CNTR_ID,
+      CNTR_SIZE,
+      CNTR_TYPE,
+      COST_TERM,
+      RATE,
+      
+      A new column named ENCODED_TYPE where:
+        If CNTR_TYPE is 'HC', then assign 1
+        If CNTR_TYPE is 'GP', then assign 2
+        If CNTR_TYPE is 'GP (SOC)', then assign 3
+        If CNTR_TYPE is 'HC NOR', then assign 4
+        If CNTR_TYPE is 'HC (SOC)', then assign 5
+        If CNTR_TYPE is 'HC (DG)', then assign 6
+
+      A new column named ENCODED_TERM where:
+        If COST_TERM is 'FC', then assign 1
+        If COST_TERM is 'FP', then assign 2
+
+      A new column named POD_ID_EN which is the result of applying the Oracle hash function to POD_ID

@@ -1,0 +1,31 @@
+Define a subquery named A:
+  From tables COSTING as CT, CONSOL as C, CONSOL_CNTR as CC, TRADER as T,
+    Extract fields COM_ID, CSL_ID, CNTR_ID, COST_C, COST_DESC, COST_RATE, COST_UNIT, COST_QTY, 
+      NVL(COST_TERM, 'FP') as COST_TERM, PARTY_ID, COST_CURR, COST_EX_RATE, LOC_AMT, DOC_AMT, 
+      DOC_TYPE, DOC_NO, POL_ID, POD_ID, POD, VESSEL, ETD_POL_D, ETA_POD_D, CNTR_SIZE, CNTR_TYPE, 
+      T.NAME as PARTY_NAME, ETA_ETD_NO.
+    The extracted data must satisfy several conditions:
+      C.COM_ID should be '010'
+      C.JOB_TYPE should be 'CS'
+      CT.COM_ID should be equal to C.COM_ID
+      CT.CSL_ID should be equal to C.CSL_ID
+      C.COST_CENTER should be 'E'
+      CT.COM_ID should be equal to CC.COM_ID
+      CT.CNTR_ID should be equal to CC.CNTR_ID
+      CT.PARTY_ID should be equal to T.PARTY_ID
+      CT.COST_C should be 'OF-E-CT-CR'
+      CT.COST_CURR should be 'USD'
+      CT.BKG_NO should be NULL
+
+Then, from the result of subquery A:
+  Group by COM_ID, CSL_ID, ETA_ETD_NO, CNTR_ID, COST_TERM,
+    Extract fields COM_ID, CSL_ID, ETA_ETD_NO, CNTR_ID, COST_TERM,
+    And for each group, extract the following:
+      The maximum of PARTY_ID as PARTY_ID
+      The maximum of PARTY_NAME as PARTY_NAME
+      The maximum of POD_ID as POD_ID
+      The maximum of POD as POD
+      The maximum of ETD_POL_D as ETD_POL_D
+      The maximum of CNTR_SIZE as CNTR_SIZE
+      The maximum of CNTR_TYPE as CNTR_TYPE
+      The absolute sum of COST_RATE as RATE
