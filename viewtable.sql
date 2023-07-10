@@ -1,3 +1,5 @@
+
+-- View Table from selected Query and some encoding of data
 CREATE OR REPLACE FORCE EDITIONABLE VIEW "VW_CR_COST_OAC"
 ("COM_ID", "PARTY_ID", "PARTY_NAME", "CSL_ID", "ETA_ETD_NO"
 , "ETD_POL_D", "POD_ID", "POD", "CNTR_ID", "CNTR_SIZE"
