@@ -7,6 +7,28 @@ GUID: 2609758W
 > To enter environment: ```env/Scripts/Activate ```<br />
 > To install packages: ```pip install -r requirements.txt```
 
+>[!NOTE]
+> Library used: 
+> - sklearn
+>   - MinMaxScaler
+>   - DecisionTreeRegressor
+>   - GridSearchCV
+>   - TimeSeriesSplit
+>   - DecisionTreeRegressor
+> - tensorflow
+>   - LSTM
+>   - Dropout
+>   - Dense
+>   - Bidirectional
+> - pmdarima
+> - keras
+    - EarlyStopping
+> - scipy
+> - matplot
+> - seaborn
+> - numpy
+> - pandas
+
 ## Flow Chart:
 ![Flow Chart](/images/flowchart.PNG)
 
