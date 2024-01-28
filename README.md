@@ -6,3 +6,6 @@ GUID: 2609758W
 > [!IMPORTANT]
 > To enter environment: ```env/Scripts/Activate ```<br />
 > To install packages: ```pip install -r requirements.txt```
+
+![Flow Chart](/images/flowchart.PNG)
+![Dataset Key Format](/images/dataset_key_format.PNG)
