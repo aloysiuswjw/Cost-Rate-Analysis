@@ -9,7 +9,7 @@ GUID: 2609758W
 > Dataset used are test datasets.
 
 >[!NOTE]
-> ##Library used: 
+> ## Library used: 
 > - sklearn
 >   - MinMaxScaler
 >   - DecisionTreeRegressor
