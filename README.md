@@ -5,7 +5,7 @@ GUID: 2609758W
 
 > [!IMPORTANT]
 > To enter environment: ```env/Scripts/Activate ```<br />
-> To install packages: ```pip install -r requirements.txt```
+> To install packages: ```pip install -r requirements.txt```<br />
 > Dataset used are test datasets.
 
 >[!NOTE]
