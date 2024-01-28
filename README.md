@@ -6,9 +6,10 @@ GUID: 2609758W
 > [!IMPORTANT]
 > To enter environment: ```env/Scripts/Activate ```<br />
 > To install packages: ```pip install -r requirements.txt```
+> Dataset used are test datasets.
 
 >[!NOTE]
-> Library used: 
+> ##Library used: 
 > - sklearn
 >   - MinMaxScaler
 >   - DecisionTreeRegressor
